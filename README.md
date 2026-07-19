@@ -606,3 +606,17 @@ heart.remove();
 }
 
 setInterval(createHeart,300);
+<script>
+
+</script> function goToScene(sceneNum) {
+    // تشغيل الأغنية
+    playAudio();
+
+    // إخفاء كل المشاهد
+    document.querySelectorAll('.scene').forEach(scene => {
+        scene.classList.remove('active');
+    });
+
+    // إظهار المشهد المطلوب
+    document.getElementById('scene' + sceneNum).classList.add('active');
+}
